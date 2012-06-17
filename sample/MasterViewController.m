@@ -13,7 +13,7 @@
 #import "MasterViewController.h"
 
 @interface MasterViewController()
-@property (retain,nonatomic) UIPopoverController *masterPopoverController;
+@property (nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation MasterViewController
@@ -64,7 +64,6 @@
 					UIViewController *controller = [[CASample1ViewController alloc] initWithNibName:@"CASample1View" bundle:nil];
 			
 					[self.detailViewController loadDetailController:controller];
-					[controller release];
 					break;
 				}
 				case 1:
@@ -72,7 +71,6 @@
 					UIViewController *controller = [[CASample2ViewController alloc] initWithNibName:@"CASample2View" bundle:nil];
 			
 					[self.detailViewController loadDetailController:controller];
-					[controller release];
 					break;
 				}
 				case 2:
@@ -80,7 +78,6 @@
 					UIViewController *controller = [[CASample3ViewController alloc] initWithNibName:@"CASample3View" bundle:nil];
 			
 					[self.detailViewController loadDetailController:controller];
-					[controller release];
 					break;
 				}
 			}

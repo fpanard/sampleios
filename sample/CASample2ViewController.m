@@ -24,10 +24,6 @@ static CGFloat kYSlices = 8.0f;
     [super didReceiveMemoryWarning];
 }
 
-- (void)dealloc
-{
-	[super dealloc];
-}
 
 #pragma mark - View lifecycle
 
@@ -75,7 +71,7 @@ static CGFloat kYSlices = 8.0f;
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-	self.imageLayer.contents = (id)drawnImage;
+	self.imageLayer.contents = (__bridge id)drawnImage;
 	NSArray *subLayers = [NSArray arrayWithArray:[self.imageLayer sublayers]];
 	
 	for (CALayer *layer in subLayers)
@@ -156,7 +152,7 @@ static CGFloat kYSlices = 8.0f;
 				
 				layer.frame = frame;
 				layer.actions = [NSDictionary dictionaryWithObject:[self animationForX:x Y:y imageSize:imageSize] forKey:@"opacity"];
-				layer.contents = (id)subImage;
+				layer.contents = (__bridge id)subImage;
 				CFRelease(subImage);
 				[layers addObject:layer];
 			}
@@ -212,7 +208,7 @@ static CGFloat kYSlices = 8.0f;
 {
 	self.image = image;
 	drawnImage = [self scaleAndCropImage:self.image];
-	self.imageLayer.contents = (id)drawnImage;
+	self.imageLayer.contents = (__bridge id)drawnImage;
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
 		[self.popController dismissPopoverAnimated:YES];

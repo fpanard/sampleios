@@ -11,5 +11,5 @@
 @class BoxView;
 
 @interface SimpleView : UIView
-@property(nonatomic,readonly,assign) BoxView *boxView;
+@property(nonatomic,readonly,strong) BoxView *boxView;
 @end

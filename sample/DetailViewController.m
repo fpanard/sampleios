@@ -9,8 +9,8 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController()
-@property (retain,nonatomic) UIPopoverController *masterPopoverController;
-@property (retain,nonatomic) UIViewController *currentController;
+@property (nonatomic) UIPopoverController *masterPopoverController;
+@property (nonatomic) UIViewController *currentController;
 @end
 
 @implementation DetailViewController
@@ -27,7 +27,6 @@
 	UIViewController *controller = [[UIViewController alloc] initWithNibName:nibName bundle:nil];
 	
 	[self loadDetailController:controller];
-	[controller release];
 	self.title = nibName;
 }
 

@@ -23,7 +23,7 @@
 	CGRect rect = CGRectMake((320.0f - size) / 2.0f,size + 10.0f,size,size);
 	UIGestureRecognizer *gesturePinch,*gestureRotate;
 
-	boxView = [[[BoxView alloc] initWithFrame:rect] autorelease];
+	boxView = [[BoxView alloc] initWithFrame:rect];
 	boxView.backgroundColor = [UIColor redColor];
 	self.backgroundColor = [UIColor blackColor];
 	[self addSubview:boxView];
@@ -31,8 +31,6 @@
 	[self addGestureRecognizer:gesturePinch];
 	gestureRotate = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotation:)];
 	[self addGestureRecognizer:gestureRotate];
-	[gesturePinch release];
-	[gestureRotate release];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

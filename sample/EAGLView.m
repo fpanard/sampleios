@@ -13,8 +13,8 @@
 #define USE_DEPTH_BUFFER		0
 
 @interface EAGLView()
-@property(nonatomic,retain) EAGLContext *context;
-@property(nonatomic,assign) NSTimer *animationTimer;
+@property(nonatomic) EAGLContext *context;
+@property(nonatomic,weak) NSTimer *animationTimer;
 
 - (BOOL)createFramebuffer;
 - (void)destroyFramebuffer;
@@ -51,7 +51,6 @@
 	[self stopAnimation];
 	if ([EAGLContext currentContext] == context)
 		[EAGLContext setCurrentContext:nil];
-	[super dealloc];
 }
 
 - (void)layoutSubviews

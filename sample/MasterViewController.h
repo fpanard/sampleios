@@ -16,5 +16,5 @@
 	IBOutlet MasterDatasource *masterDatasource;
 }
 
-@property (retain,nonatomic) DetailViewController *detailViewController;
+@property (strong,nonatomic) DetailViewController *detailViewController;
 @end

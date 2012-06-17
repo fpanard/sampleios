@@ -10,7 +10,7 @@
 
 @interface sampleAppDelegate : NSObject <UIApplicationDelegate>
 
-@property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) UINavigationController *navigationController;
-@property (nonatomic, retain) UISplitViewController *splitViewController;
+@property (strong,nonatomic) UIWindow *window;
+@property (strong,nonatomic) UINavigationController *navigationController;
+@property (strong,nonatomic) UISplitViewController *splitViewController;
 @end

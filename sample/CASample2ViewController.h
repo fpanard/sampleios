@@ -18,7 +18,7 @@
 - (IBAction)photo:(id)sender;
 - (IBAction)pop:(id)sender;
 
-@property(nonatomic,retain) UIImage *image;
-@property(nonatomic,retain) CALayer *imageLayer;
-@property(nonatomic,retain) UIPopoverController *popController;
+@property(nonatomic) UIImage *image;
+@property(nonatomic) CALayer *imageLayer;
+@property(strong,nonatomic) UIPopoverController *popController;
 @end

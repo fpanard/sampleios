@@ -51,11 +51,6 @@
 {
 }
 
-- (void)dealloc
-{
-	[_window release];
-    [super dealloc];
-}
 
 - (void)initPhone
 {
