@@ -210,6 +210,7 @@
 		1BD7FAB015AC46AC0003D4AC /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD7FAAF15AC46AC0003D4AC /* GameCenterManager.m */; };
 		1BD7FAB315AC485D0003D4AC /* TapperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BD7FAB215AC485D0003D4AC /* TapperView.xib */; };
 		1BD7FAB515AC48790003D4AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BD7FAB415AC48790003D4AC /* Localizable.strings */; };
+		1BE3BC2B15BABD2000CE66D4 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1BE3BC2A15BABD2000CE66D4 /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -498,6 +499,7 @@
 		1BD7FAAF15AC46AC0003D4AC /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 		1BD7FAB215AC485D0003D4AC /* TapperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapperView.xib; sourceTree = "<group>"; };
 		1BD7FAB415AC48790003D4AC /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		1BE3BC2A15BABD2000CE66D4 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,6 +600,7 @@
 		1BA821571413DFC800CDE049 = {
 			isa = PBXGroup;
 			children = (
+				1BE3BC2A15BABD2000CE66D4 /* README.markdown */,
 				1B1E32C215AD9C1800CA25B2 /* TouchXML */,
 				1BA8216C1413DFC800CDE049 /* sample */,
 				1BA821651413DFC800CDE049 /* Frameworks */,
@@ -1082,6 +1085,7 @@
 				1B753A9415B9A77200009146 /* WebCamViewController.xib in Resources */,
 				1B753A9915B9A8A600009146 /* WebPDFViewController.xib in Resources */,
 				1B753D6615B9D76700009146 /* sequence.m4v in Resources */,
+				1BE3BC2B15BABD2000CE66D4 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
