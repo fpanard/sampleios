@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class DetailViewController;
-@class MasterDatasource;
 
-@interface MasterViewController : UITableViewController<UITableViewDelegate>
+@interface MasterController : UITableViewController<UITableViewDelegate>
 {
-	IBOutlet MasterDatasource *masterDatasource;
 }
 
-@property (strong,nonatomic) DetailViewController *detailViewController;
+@property (strong,nonatomic) UIViewController *detailViewController;
+@end
+
+@interface MasterViewController : MasterController
 @end

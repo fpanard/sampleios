@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Economie Gestion</key>
+	<array>
+		<string>Economie, Société</string>
+		<string>Efficacité professionnelle</string>
+		<string>Entrepreneuriat</string>
+		<string>Environnement</string>
+		<string>Finance, Comptabilité</string>
+		<string>Management</string>
+		<string>Marketing</string>
+		<string>Sciences appliquées à la gestion</string>
+		<string>Stratégie</string>
+		<string>Systèmes d&apos;informations</string>
+		<string>Tourisme</string>
+	</array>
+	<key>Sciences, techniques et médecine</key>
+	<array>
+		<string>Anatomie</string>
+		<string>Biologie</string>
+		<string>Chimie</string>
+		<string>Culture scientifique</string>
+		<string>Ecologie et environnement</string>
+		<string>Génétique</string>
+		<string>Informatique scientifique</string>
+		<string>Mathématiques</string>
+		<string>Microbiologie</string>
+		<string>Physique</string>
+		<string>Soins infirmiers</string>
+	</array>
+	<key>Sciences humaines</key>
+	<array>
+		<string>Littérature</string>
+		<string>Philosophie</string>
+		<string>Psychologie</string>
+	</array>
+	<key>Apprentissage de l&apos;anglais</key>
+	<array>
+		<string>Anglais pour les enfants</string>
+		<string>Dictionnaires</string>
+		<string>Grammaire</string>
+		<string>Tests et examens</string>
+	</array>
+	<key>Classes prépas</key>
+	<array>
+		<string>Economiques et commerciales</string>
+		<string>Scientifiques</string>
+	</array>
+	<key>Informatique et Internet</key>
+	<array>
+		<string>Administration de systèmes</string>
+		<string>Base de données</string>
+		<string>Bureautique</string>
+		<string>Graphisme, PAO</string>
+		<string>Informatique pour débutants</string>
+		<string>Langage et programmation</string>
+		<string>Mac</string>
+		<string>Maintenance, hardware</string>
+		<string>Open Source</string>
+		<string>Photographie, audio, vidéo</string>
+		<string>Systèmes d&apos;exploitation</string>
+		<string>Web</string>
+	</array>
+	<key>Photo, multimédia</key>
+	<array>
+		<string>Loisirs numériques</string>
+		<string>Photographie numérique</string>
+		<string>Retouche photo</string>
+		<string>Son, musique, vidéo</string>
+	</array>
+	<key>Vie pratique, jeux</key>
+	<array>
+		<string>Développement personnel</string>
+		<string>Ecologie et environnement</string>
+		<string>Jeux et réseaux sociaux</string>
+		<string>Livres Cadeaux</string>
+		<string>Santé bien être</string>
+		<string>Puériculture</string>
+		<string>Sports</string>
+	</array>
+</dict>
+</plist>

@@ -10,7 +10,6 @@
 
 @interface DetailViewController()
 @property (nonatomic) UIPopoverController *masterPopoverController;
-@property (nonatomic) UIViewController *currentController;
 @end
 
 @implementation DetailViewController
@@ -22,20 +21,38 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)loadDetailView:(NSString *)nibName
+- (void)loadDetailView:(NSString *)nibName name:(NSString *)name
 {
 	UIViewController *controller = [[UIViewController alloc] initWithNibName:nibName bundle:nil];
 	
-	[self loadDetailController:controller];
-	self.title = nibName;
+	[self loadDetailController:controller name:name];
+	if (!name)
+		self.title = nibName;
 }
 
-- (void)loadDetailController:(UIViewController*)controller
+- (void)loadDetailController:(UIViewController*)controller name:(NSString *)name
 {
+	UIViewController *previousController = self.currentController;
+	
 	self.currentController = controller;
+	
+	// Gestion hiérarchie des controllers
+	
+	[self addChildViewController:controller];
 	[self.view addSubview:self.currentController.view];
-	self.currentController.view.frame = self.view.frame;
-	self.title = self.currentController.title;
+	[controller didMoveToParentViewController:self];
+	self.currentController.view.frame = self.view.bounds;
+	
+	if (name)
+		self.title = name;
+	else
+		self.title = self.currentController.title;
+	
+	// Gestion hiérarchie des controller
+	
+	[previousController willMoveToParentViewController:nil];
+	[previousController.view removeFromSuperview];				// Il faut supprimer l'ancien controller sinon il reste en fond
+	[previousController removeFromParentViewController];
 	
 	// %TODO Pb conflit avec les boutons de navigation
 	switch ([[UIDevice currentDevice] orientation])
@@ -55,16 +72,6 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
@@ -74,7 +81,9 @@
 
 - (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
 {
-	barButtonItem.title = [[[svc viewControllers] objectAtIndex:0] title];
+	NSArray *controllers = [svc viewControllers];
+	
+	barButtonItem.title = [[[controllers objectAtIndex:0] visibleViewController] title];
 	[self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
 	self.masterPopoverController = pc;
 }

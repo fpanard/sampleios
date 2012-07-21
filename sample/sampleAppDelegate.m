@@ -71,6 +71,7 @@
 	self.splitViewController = [[UISplitViewController alloc] init];
 	self.splitViewController.delegate = detailViewController;
 	self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController,nil];
+	self.splitViewController.presentsWithGesture = NO;				// Désactivation gesture pour le masquage, pose un problème pour le diaporama : A voir est-ce le bon moment ?
 	self.window.rootViewController = self.splitViewController;
 }
 @end

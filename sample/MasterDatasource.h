@@ -10,4 +10,6 @@
 
 @interface MasterDatasource : NSObject<UITableViewDataSource>
 
+- (id)initWithDictionary:(NSString *)dictionary;
+- (NSDictionary *)objectAtPath:(NSIndexPath *)indexPath;
 @end

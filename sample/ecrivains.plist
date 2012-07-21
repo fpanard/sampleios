@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nom</key>
+		<string>Liber &amp; Co Livres Et Compagnie</string>
+		<key>adresse</key>
+		<string>2 Rue Remparts
+56360 Palais (Le), France</string>
+		<key>latitude</key>
+		<real>47.338821</real>
+		<key>longitude</key>
+		<real>-3.164062</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Les Editions Mutines</string>
+		<key>adresse</key>
+		<string>34 Rue Vernottes
+21110 Cessey-sur-Tille, France</string>
+		<key>latitude</key>
+		<real>47.279228</real>
+		<key>longitude</key>
+		<real>5.185547</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Les Ardents Editeurs</string>
+		<key>adresse</key>
+		<string>31 Rue Adrien Dubouché
+87000 Limoges, France</string>
+		<key>latitude</key>
+		<real>45.8288</real>
+		<key>longitude</key>
+		<real>1.230469</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Maison des Écritures Lombez Midi-Pyrénées</string>
+		<key>adresse</key>
+		<string>4 Rue Notre Dame
+32220 Lombez, France</string>
+		<key>latitude</key>
+		<real>43.452919</real>
+		<key>longitude</key>
+		<real>0.878906</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Le Verger éditeur</string>
+		<key>adresse</key>
+		<string>6 rue d&apos;Alsace, ZAC MUckental
+67140 Barr, France</string>
+		<key>latitude</key>
+		<real>48.400032</real>
+		<key>longitude</key>
+		<real>7.470703</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Société des Amis de Colette</string>
+		<key>adresse</key>
+		<string>1 Place Paultre des Ormes
+89520 Saint-Sauveur-en-Puisaye, France</string>
+		<key>latitude</key>
+		<real>47.620975</real>
+		<key>longitude</key>
+		<real>3.197021</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Hotel Bergerand s Au Relais De La Belle Etoile</string>
+		<key>adresse</key>
+		<string>4 Rue Moulins
+89800 Chablis, France</string>
+		<key>latitude</key>
+		<real>47.813156</real>
+		<key>longitude</key>
+		<real>3.80127</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>Flandres</string>
+		<key>adresse</key>
+		<string>26 Rue Donckèle
+59190 Hazebrouck, France</string>
+		<key>latitude</key>
+		<real>50.722546</real>
+		<key>longitude</key>
+		<real>2.548828</real>
+	</dict>
+	<dict>
+		<key>nom</key>
+		<string>M.J.C. Maison Pour Tous</string>
+		<key>adresse</key>
+		<string>1 Rue Racine
+02460 Ferté Milon (La), France</string>
+		<key>latitude</key>
+		<real>49.181702</real>
+		<key>longitude</key>
+		<real>3.120117</real>
+	</dict>
+</array>
+</plist>

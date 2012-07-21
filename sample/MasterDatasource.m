@@ -8,39 +8,52 @@
 
 #import "MasterDatasource.h"
 
+@interface MasterDatasource ()
+{
+	NSDictionary *data;
+	NSArray *keys;
+}
+@end
+
 @implementation MasterDatasource
+- (id)initWithDictionary:(NSString *)dictionary
+{
+	if (!(self = [super init]))
+		return nil;
+	data = [[NSDictionary alloc] initWithContentsOfFile:dictionary];
+	keys = [[data allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+	return self;
+}
+
+- (NSDictionary *)objectAtPath:(NSIndexPath *)indexPath
+{
+	NSString *key = [keys objectAtIndex:[indexPath indexAtPosition:0]];
+	
+	return [[data objectForKey:key] objectAtIndex:[indexPath indexAtPosition:1]];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+	return [data count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	switch (section)
-	{
-		case 0:
-			return 3;
-		case 1:
-			return 1;
-		case 2:
-			return 1;
-	}
+	NSString *key = [keys objectAtIndex:section];
+	
+	if (key)
+		return [[data objectForKey:key] count];
 	return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	switch (section)
-	{
-		case 0:
-			return @"Core Animation";
-		case 1:
-			return @"Boutons";
-		case 2:
-			return @"Divers";
-	}
+	NSString *key = [keys objectAtIndex:section];
+
+	if (key)
+		return key;
 	return @"";
 }
 
@@ -55,29 +68,7 @@
 		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
-	switch ([indexPath indexAtPosition:0])
-	{
-		case 0:
-			switch ([indexPath indexAtPosition:1])
-			{
-				case 0:
-					cell.textLabel.text = @"CASample 1";
-					break;
-				case 1:
-					cell.textLabel.text = @"CASample 2";
-					break;
-				case 2:
-					cell.textLabel.text = @"CASample 3";
-					break;
-			}
-			break;
-		case 1:
-			cell.textLabel.text = @"Gallery 1";
-			break;
-		case 2:
-			cell.textLabel.text = @"Vue quelconque";
-			break;
-	}
+	cell.textLabel.text = [[self objectAtPath:indexPath] objectForKey:@"name"];
     return cell;
 }
 @end

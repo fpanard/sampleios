@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Core Animation</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>CASample 1</string>
+			<key>view</key>
+			<string>CASample1View</string>
+			<key>controller</key>
+			<string>CASample1ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CASample 2</string>
+			<key>view</key>
+			<string>CASample2View</string>
+			<key>controller</key>
+			<string>CASample2ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CASample 3</string>
+			<key>view</key>
+			<string>CASample3View</string>
+			<key>controller</key>
+			<string>CASample3ViewController</string>
+		</dict>
+	</array>
+	<key>Boutons</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Gallery 1</string>
+			<key>view_ipad</key>
+			<string>ButtonGallery1View_iPad</string>
+			<key>view_iphone</key>
+			<string>ButtonGallery1View_iPhone</string>
+		</dict>
+	</array>
+	<key>Divers</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Vue quelconque</string>
+			<key>view</key>
+			<string>DetailView1</string>
+		</dict>
+	</array>
+	<key>Pearson</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Accelerometre</string>
+			<key>controller</key>
+			<string>AccelerometreViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Altimetre</string>
+			<key>view</key>
+			<string>InfoCarteViewController</string>
+			<key>controller</key>
+			<string>InfoCarteViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Information carte</string>
+			<key>controller</key>
+			<string>InfoCarte2ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bluetooth</string>
+			<key>view</key>
+			<string>BluetoothViewController</string>
+			<key>controller</key>
+			<string>BluetoothViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Carte</string>
+			<key>controller</key>
+			<string>CarteViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Chant oiseau</string>
+			<key>controller</key>
+			<string>ChantOiseauViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Choix action</string>
+			<key>controller</key>
+			<string>ChoiceViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Diaporama</string>
+			<key>controller</key>
+			<string>DiaporamaViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Game Center</string>
+			<key>controller</key>
+			<string>TapperController</string>
+			<key>view</key>
+			<string>TapperView</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>iLapin</string>
+			<key>controller</key>
+			<string>iLapinViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>RSS Reader</string>
+			<key>controller</key>
+			<string>ReaderDetailViewController</string>
+			<key>mastercontroller</key>
+			<string>ReaderMasterViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Maison écrivains</string>
+			<key>controller</key>
+			<string>MaisonEcrivainViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Peinture</string>
+			<key>controller</key>
+			<string>PeintureViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mega Quiz</string>
+			<key>controller</key>
+			<string>QuizViewController</string>
+			<key>view_ipad</key>
+			<string>QuizViewController_iPad</string>
+			<key>view_iphone</key>
+			<string>QuizViewController_iPhone</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Multi convertisseur</string>
+			<key>controller</key>
+			<string>MultiConvertisseurViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Multi Quiz</string>
+			<key>controller</key>
+			<string>MultiQuizViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Multi vues</string>
+			<key>controller</key>
+			<string>MultiViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Navigation</string>
+			<key>controller</key>
+			<string>TableMasterController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Mot de passe</string>
+			<key>controller</key>
+			<string>PwdMainViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Phototèque</string>
+			<key>controller</key>
+			<string>PhotoViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>MiniQuiz</string>
+			<key>controller</key>
+			<string>MiniQuizViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Retouche photo</string>
+			<key>controller</key>
+			<string>RetouchePhotoViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Roue 1</string>
+			<key>controller</key>
+			<string>Roue1ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Roue 2</string>
+			<key>controller</key>
+			<string>Roue2ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Roue 3</string>
+			<key>controller</key>
+			<string>Roue3ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Roue 4</string>
+			<key>controller</key>
+			<string>Roue4ViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Slider</string>
+			<key>controller</key>
+			<string>SliderViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>SplitView</string>
+			<key>controller</key>
+			<string>SplitDetailViewController</string>
+			<key>mastercontroller</key>
+			<string>SplitMasterViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Table</string>
+			<key>controller</key>
+			<string>TableViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Toucher</string>
+			<key>controller</key>
+			<string>ToucherViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Util Quiz</string>
+			<key>controller</key>
+			<string>UtilQuizMainViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Video</string>
+			<key>controller</key>
+			<string>VideoViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>WebCam</string>
+			<key>controller</key>
+			<string>WebCamViewController</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>WebPDF</string>
+			<key>controller</key>
+			<string>WebPDFViewController</string>
+		</dict>
+	</array>
+</dict>
+</plist>

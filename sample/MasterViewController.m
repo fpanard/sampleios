@@ -6,18 +6,26 @@
 //  Copyright 2011 FrPa. All rights reserved.
 //
 
+#import "MasterDatasource.h"
 #import "DetailViewController.h"
 #import "CASample1ViewController.h"
 #import "CASample2ViewController.h"
 #import "CASample3ViewController.h"
 #import "MasterViewController.h"
 
+@implementation MasterController
+@synthesize detailViewController = _detailViewController;
+@end
+
 @interface MasterViewController()
+{
+	MasterDatasource *datasource;
+}
+
 @property (nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation MasterViewController
-@synthesize detailViewController = _detailViewController;
 @synthesize masterPopoverController = _masterPopoverController;
 
 - (void)didReceiveMemoryWarning
@@ -29,8 +37,10 @@
 
 - (void)viewDidLoad
 {
+	datasource = [[MasterDatasource alloc] initWithDictionary:[[NSBundle mainBundle] pathForResource:@"master" ofType:@"plist"]];
     [super viewDidLoad];
 	self.title = @"Samples";
+	self.tableView.dataSource = datasource;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 	{
 		self.clearsSelectionOnViewWillAppear = NO;
@@ -54,53 +64,33 @@
 			self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView_iPhone" bundle:nil];
 		[self.navigationController pushViewController:self.detailViewController animated:YES];
 	}
-	switch ([indexPath indexAtPosition:0])
+	NSDictionary *sample = [datasource objectAtPath:indexPath];
+	NSString *controllerName = [sample objectForKey:@"controller"];
+	NSString *viewName = [sample objectForKey:@"view"];
+	NSString *masterControllerName = [sample objectForKey:@"mastercontroller"];
+	
+	if (!viewName)
+		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+			viewName = [sample objectForKey:@"view_iphone"];
+		else
+			viewName = [sample objectForKey:@"view_ipad"];
+	if (!controllerName)
+		[(DetailViewController *)self.detailViewController loadDetailView:viewName name:[sample objectForKey:@"name"]];
+	else
+	if (!viewName)
+		[(DetailViewController *)self.detailViewController loadDetailController:[[NSClassFromString(controllerName) alloc] init] name:[sample objectForKey:@"name"]];
+	else
 	{
-		case 0:
-			switch ([indexPath indexAtPosition:1])
-			{
-				case 0:
-				{
-					UIViewController *controller = [[CASample1ViewController alloc] initWithNibName:@"CASample1View" bundle:nil];
-			
-					[self.detailViewController loadDetailController:controller];
-					break;
-				}
-				case 1:
-				{
-					UIViewController *controller = [[CASample2ViewController alloc] initWithNibName:@"CASample2View" bundle:nil];
-			
-					[self.detailViewController loadDetailController:controller];
-					break;
-				}
-				case 2:
-				{
-					UIViewController *controller = [[CASample3ViewController alloc] initWithNibName:@"CASample3View" bundle:nil];
-			
-					[self.detailViewController loadDetailController:controller];
-					break;
-				}
-			}
-			break;
-		case 1:
-			switch ([indexPath indexAtPosition:1])
-			{
-				case 0:
-					if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-						[self.detailViewController loadDetailView:@"ButtonGallery1View_iPhone"];
-					else
-						[self.detailViewController loadDetailView:@"ButtonGallery1View_iPad"];
-					break;
-			}
-			break;
-		case 2:
-			switch ([indexPath indexAtPosition:1])
-			{
-				case 0:
-					[self.detailViewController loadDetailView:@"DetailView1"];
-					break;
-			}
-			break;
+		UIViewController *controller = [[NSClassFromString(controllerName) alloc] initWithNibName:viewName bundle:nil];
+		
+		[(DetailViewController *)self.detailViewController loadDetailController:controller name:[sample objectForKey:@"name"]];
+	}
+	if (masterControllerName)
+	{
+		MasterController *masterController = [[NSClassFromString(masterControllerName) alloc] init];
+		
+		masterController.detailViewController = ((DetailViewController *)self.detailViewController).currentController;
+		[self.navigationController pushViewController:masterController animated:YES];
 	}
 }
 @end

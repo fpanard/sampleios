@@ -8,7 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@class EAGLView;
-
 @interface CASample3ViewController : UIViewController
 @end

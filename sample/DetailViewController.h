@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController<UISplitViewControllerDelegate>
-- (void)loadDetailView:(NSString *)nibName;
-- (void)loadDetailController:(UIViewController*)controller;
+- (void)loadDetailView:(NSString *)nibName name:(NSString *)name;
+- (void)loadDetailController:(UIViewController*)controller name:(NSString *)name;
+
+@property (nonatomic) UIViewController *currentController;
 @end

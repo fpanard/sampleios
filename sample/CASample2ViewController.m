@@ -24,27 +24,22 @@ static CGFloat kYSlices = 8.0f;
     [super didReceiveMemoryWarning];
 }
 
-
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
+- (void)viewDidAppear:(BOOL)animated
 {
 	self.title = @"Confetti";
 	self.imageLayer = [CALayer layer];
 	self.imageLayer.frame = CGRectMake(kMinX,kMinY,imageView.bounds.size.width,imageView.bounds.size.height);
-	self.imageLayer.contentsGravity = kCAGravityResizeAspectFill;
+//	self.imageLayer.contentsGravity = kCAGravityResizeAspectFill;
+	self.imageLayer.contentsGravity = kCAGravityResizeAspect;
 	self.imageLayer.masksToBounds = YES;
 	[imageView.layer addSublayer:self.imageLayer];
 }
 
-- (void)viewDidUnload
+- (void)viewWillLayoutSubviews
 {
-    [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
+	self.imageLayer.frame = CGRectMake(kMinX,kMinY,imageView.bounds.size.width,imageView.bounds.size.height);
 }
 
 - (void)photo:(id)sender
