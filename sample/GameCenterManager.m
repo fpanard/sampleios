@@ -92,6 +92,7 @@
 {
 	assert([NSThread isMainThread]);
 	if (delegate)
+	{
 		if ([delegate respondsToSelector: selector])
 		{
 			if (arg)
@@ -101,6 +102,7 @@
 		}
 		else
 			NSLog(@"Missed Method");
+	}
 }
 
 

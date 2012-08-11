@@ -70,10 +70,12 @@
 	NSString *masterControllerName = [sample objectForKey:@"mastercontroller"];
 	
 	if (!viewName)
+	{
 		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 			viewName = [sample objectForKey:@"view_iphone"];
 		else
 			viewName = [sample objectForKey:@"view_ipad"];
+	}
 	if (!controllerName)
 		[(DetailViewController *)self.detailViewController loadDetailView:viewName name:[sample objectForKey:@"name"]];
 	else

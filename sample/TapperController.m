@@ -262,7 +262,7 @@ enum
 		{
 			retCell= [self getReusableCellForID: kScoredReusableCellID];
 			retCell.textLabel.text = @"Current Score";
-			retCell.detailTextLabel.text= [NSString stringWithFormat: @"%ld", self.currentScore];
+			retCell.detailTextLabel.text= [NSString stringWithFormat: @"%lld", self.currentScore];
 			break;
 		}
 		default:
@@ -611,7 +611,7 @@ static const CGFloat kGapViewHeight= 2.f;
 	{
 		int64_t personalBest= leaderBoard.localPlayerScore.value;
 		self.personalBestScoreDescription= @"Your Best:";
-		self.personalBestScoreString= [NSString stringWithFormat: @"%ld", personalBest];
+		self.personalBestScoreString= [NSString stringWithFormat: @"%lld", personalBest];
 		if([leaderBoard.scores count] >0)
 		{
 			self.leaderboardHighScoreDescription=  @"-";
@@ -635,11 +635,11 @@ static const CGFloat kGapViewHeight= 2.f;
 
 - (void) scoreReported: (NSError*) error;
 {
-	if(error == NULL)
+	if(!error)
 	{
 		[self.gameCenterManager reloadHighScoresForCategory: self.currentLeaderBoard];
 		[self showAlertWithTitle: @"High Score Reported!"
-						 message: [NSString stringWithFormat: @"", [error localizedDescription]]];
+						 message: @""];
 	}
 	else
 	{

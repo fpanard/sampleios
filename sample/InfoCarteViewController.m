@@ -38,7 +38,7 @@
 
 - (void)locationUpdated:(CLLocation *)location
 {
-	labelView.text = [NSString stringWithFormat:@"%@\nAltitude : %d",[location description],location.altitude];
+	labelView.text = [NSString stringWithFormat:@"%@\nAltitude : %f",[location description],location.altitude];
 }
 
 - (void)locationError:(NSError *)error
