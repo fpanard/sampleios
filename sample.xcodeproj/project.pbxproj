@@ -160,6 +160,9 @@
 		1B753A9715B9A89400009146 /* WebPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B753A9615B9A89400009146 /* WebPDFViewController.m */; };
 		1B753A9915B9A8A600009146 /* WebPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B753A9815B9A8A600009146 /* WebPDFViewController.xib */; };
 		1B753D6615B9D76700009146 /* sequence.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1B753D6515B9D76700009146 /* sequence.m4v */; };
+		1B767A5E1646867500901400 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B767A5B1646867500901400 /* Default-568h@2x.png */; };
+		1B767A5F1646867500901400 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B767A5C1646867500901400 /* Default.png */; };
+		1B767A601646867500901400 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B767A5D1646867500901400 /* Default@2x.png */; };
 		1B906D2B15AFF8F1002D7E9F /* MaisonEcrivainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B906D2915AFF8F1002D7E9F /* MaisonEcrivainViewController.m */; };
 		1B906D2D15AFF903002D7E9F /* MaisonEcrivainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B906D2C15AFF903002D7E9F /* MaisonEcrivainViewController.xib */; };
 		1B906D3115AFF915002D7E9F /* ecrivains.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B906D2E15AFF915002D7E9F /* ecrivains.plist */; };
@@ -427,6 +430,9 @@
 		1B753A9615B9A89400009146 /* WebPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPDFViewController.m; sourceTree = "<group>"; };
 		1B753A9815B9A8A600009146 /* WebPDFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebPDFViewController.xib; sourceTree = "<group>"; };
 		1B753D6515B9D76700009146 /* sequence.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sequence.m4v; sourceTree = "<group>"; };
+		1B767A5B1646867500901400 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1B767A5C1646867500901400 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1B767A5D1646867500901400 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1B906D2915AFF8F1002D7E9F /* MaisonEcrivainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaisonEcrivainViewController.m; sourceTree = "<group>"; };
 		1B906D2A15AFF8F1002D7E9F /* MaisonEcrivainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaisonEcrivainViewController.h; sourceTree = "<group>"; };
 		1B906D2C15AFF903002D7E9F /* MaisonEcrivainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaisonEcrivainViewController.xib; sourceTree = "<group>"; };
@@ -844,6 +850,9 @@
 		1BCB9F8B141CC76900C787F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B767A5B1646867500901400 /* Default-568h@2x.png */,
+				1B767A5C1646867500901400 /* Default.png */,
+				1B767A5D1646867500901400 /* Default@2x.png */,
 				1B39796A15B991B1004FA910 /* Alison Mosshart.jpg */,
 				1B1C548015B0376C00DF8567 /* AppleTV.png */,
 				1B1C548D15B0388700DF8567 /* arriereplan.png */,
@@ -1086,6 +1095,9 @@
 				1B753A9915B9A8A600009146 /* WebPDFViewController.xib in Resources */,
 				1B753D6615B9D76700009146 /* sequence.m4v in Resources */,
 				1BE3BC2B15BABD2000CE66D4 /* README.markdown in Resources */,
+				1B767A5E1646867500901400 /* Default-568h@2x.png in Resources */,
+				1B767A5F1646867500901400 /* Default.png in Resources */,
+				1B767A601646867500901400 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,7 +1208,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1221,7 +1232,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
